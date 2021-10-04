@@ -22,9 +22,9 @@ console.log(data)
             for (var i = 0; i < items.length; i++) {
                 document.querySelector(".filmListesi").innerHTML += `
                    <li>
-                        <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/${items[i].poster_path}" alt="" width="250", height="400">
-                        <span><b>Film Adı:</b> ${items[i].original_title}</span>
-                        <span><b>Film Dili:</b> ${items[i].original_language}</span>
+                      <a target="_blank" href="https://www.themoviedb.org/"> <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/${items[i].poster_path}" alt=""><a/>
+                      <br> <span><b>Film Adı:</b> ${items[i].original_title}</span><br>
+                        <span><b>Film Dili:</b> ${items[i].original_language}</span><br>
                         <span><b>Puan:</b> ${items[i].vote_average}</span>
                     </li>
                 `;
