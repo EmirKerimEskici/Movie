@@ -31,3 +31,25 @@ console.log(data)
             }
         }
     });
+const searchFilm=document.querySelector('.input');
+searchFilm.addEventListener('keyup',(e)=>{
+   const text = e.target.value;
+   if(text!==''){
+    console.log(text);
+    }
+ })
+jQuery.expr[':'].contains = function(a,i,m) {
+    return jQuery(a).text().toUpperCase()
+        .indexOf(m[3].toUpperCase()) >= 0;
+};
+$(document).ready(function () {
+    $(".input").keyup(function(){
+        var value = $(".input").val();
+        if(value.length==0){
+            $(".filmListesi li").show();
+        }else{
+            $(".filmListesi li").hide();
+            $(".filmListesi li:contains("+value+")").show();
+        }
+    });
+});
